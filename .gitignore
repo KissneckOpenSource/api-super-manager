@@ -1,0 +1,11 @@
+/.idea
+/.vscode
+/vendor
+/runtime
+*.log
+.env
+/public/.htaccess
+/public/storage
+/public/nginx.htaccess
+/public/excel/*
+route/apiRoute.php

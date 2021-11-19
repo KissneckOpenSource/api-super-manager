@@ -1,0 +1,50 @@
+{
+    "name": "apiadmin/apiadmin",
+    "description": "Just For Api",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "thinkphp",
+        "api",
+        "apiadmin"
+    ],
+    "homepage": "http://www.apiadmin.org/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "zhaoxiang",
+            "email": "zhaoxiang051405@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "topthink/framework": "^6.0",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-migration": "^3.0",
+        "firebase/php-jwt": "^5.2",
+        "nesbot/carbon": "^2.42",
+        "phpoffice/phpexcel": "^1.8",
+        "endroid/qr-code": "^3.9"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2",
+        "topthink/think-trace":"^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        },
+        "psr-0": {
+            "": "extend/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
+    }
+}
